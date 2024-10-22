@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Anubhav/tests" tests="1" failures="1" skipped="0" hostname="ibm-anubhavsharma" time="5.578" timestamp="Wed Sep 25 14:03:46 IST 2024">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\anubhav.sharma\Provar\PersonalProject\Anubhav\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/UIActionWPO.testcase" name="UIActionWPO.testcase" time="5.171">
+		<failure message="Execution failed"><![CDATA[The containing Screen or Row was not found.]]></failure>
+	</testcase>
+</testsuite>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="ff78c3a0-9667-4edd-a845-1c6a2c518d47" id="18">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.Switch" guid="2260274f-858d-4d7b-af99-4b1877269bc0" name="Switch" testItemId="2" title="Switch: 1">
+      <arguments>
+        <argument id="value">
+          <value class="value" valueClass="string">1</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="case" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" guid="446b8697-a1d1-47b9-916d-325c84c8a6ba" name="SwitchCase" testItemId="4" title="Case: 1">
+              <arguments>
+                <argument id="value">
+                  <value class="value" valueClass="string">1</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="string">No</value>
+                </argument>
+                <argument id="alreadyMatched"/>
+                <argument id="switchValue"/>
+              </arguments>
+              <clauses>
+                <clause name="steps" testItemId="5">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="d875ba7b-c60a-4100-93e1-a983ab661889" name="SetValues" testItemId="24" title="Set Values: ab">
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">ab</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">cricket</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" guid="d6b190e2-9a2d-4337-b9c4-700b8b6a6d91" name="Break" testItemId="28" title="Break"/>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+        <clause name="case" testItemId="17">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" guid="a0b422f1-4bcb-40ac-85dc-33e1d8befa3d" name="SwitchCase" testItemId="18" title="Case: 2">
+              <arguments>
+                <argument id="value">
+                  <value class="value" valueClass="string">2</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="string">No</value>
+                </argument>
+                <argument id="alreadyMatched"/>
+                <argument id="switchValue"/>
+              </arguments>
+              <clauses>
+                <clause name="steps" testItemId="19">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="fa973a8b-f23e-473b-b067-01647b21fdc2" name="SetValues" testItemId="25" title="Set Values: bc">
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">bc</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">cricket</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" guid="cf6edb0e-581b-4e04-b040-faaa7c77bcca" name="Break" testItemId="27" title="Break">
+                      <tags/>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+        <clause name="default" testItemId="20">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.SwitchDefault" guid="521caeb6-afa7-4de6-ac48-039c494e7c8a" name="SwitchDefault" testItemId="21" title="Default">
+              <clauses>
+                <clause name="steps" testItemId="22">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" guid="ce4ed4b8-636b-436b-9d05-2a6286b223d2" name="AssertValues" testItemId="23" title="Assert: {ab} EqualTo cricket">
+                      <arguments>
+                        <argument id="expectedValue">
+                          <value class="variable">
+                            <path element="ab"/>
+                          </value>
+                        </argument>
+                        <argument id="comparisonType">
+                          <value class="value" valueClass="string">EqualTo</value>
+                        </argument>
+                        <argument id="actualValue">
+                          <value class="value" valueClass="string">cricket</value>
+                        </argument>
+                        <argument id="caseSensitive">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="numeric">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="retainDecimals">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="nullGreater">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="matchMultiLine">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="matchDotAll">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="failureMessage">
+                          <value class="value" valueClass="string">Matched</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

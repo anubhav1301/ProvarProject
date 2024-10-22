@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="46d93664-42f1-4723-9970-51115d00aeb3" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="4350fa61-22e2-4ba1-932c-3cad8d86f44f" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesforceConn (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">86eb8454-8553-45e2-9d04-ff8b0e6d8460</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="f0517276-10a2-4fa5-9ecd-aab031c23b2b" name="StepGroup" testItemId="2" title="Retrieve Amount">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Retrieve Amount</value>
+        </argument>
+      </arguments>
+      <parameterValueSources/>
+      <clauses>
+        <clause name="hidden" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="474a285e-55bf-4323-8ea3-dfc3d7064dc5" name="ApexSoqlQuery" testItemId="7" title="SOQL Query: {soqlQuery}=&gt;AccountRows">
+              <arguments>
+                <argument argId="c32a941b-178c-4822-83ec-56920f636dc9" id="soqlQuery">
+                  <value class="variable">
+                    <path element="soqlQuery"/>
+                  </value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">SalesforceConn</value>
+                </argument>
+                <argument id="resultListName">
+                  <value class="value" valueClass="string">AccountRows</value>
+                </argument>
+                <argument id="soqlColumnAliases">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:c32a941b-178c-4822-83ec-56920f636dc9" name="soqlQuery" passwordVariableAllowed="true" title="SOQL Query">
+      <summary>The Apex code to be executed.</summary>
+      <type>
+        <textType/>
+      </type>
+    </param>
+    <param name="AccountName" passwordVariableAllowed="true" title="Account Name">
+      <summary>The account name to query for. </summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="AccountRows" passwordVariableAllowed="true" title="AccountRows">
+      <summary>The name under which the returned rows will be stored.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="AccountRows"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="soqlQuery">
+      <value class="value" valueClass="string">select Id from Account where Name like 'DevOps%'</value>
+    </argument>
+    <argument id="AccountName">
+      <value class="value" valueClass="string">DevOps</value>
+    </argument>
+  </args>
+  <outputArgs>
+    <outputArgument id="AccountRows">
+      <name class="value" valueClass="string">AccountRows</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>

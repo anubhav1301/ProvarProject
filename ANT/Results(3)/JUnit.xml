@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Anubhav/tests" tests="1" failures="0" skipped="0" hostname="ibm-anubhavsharma" time="76.036" timestamp="Thu Jun 20 16:43:55 IST 2024">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\anubhav.sharma\Provar\PersonalProject\Anubhav\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/Account Create.testcase" name="Account Create.testcase" time="72.802">
+	</testcase>
+</testsuite>

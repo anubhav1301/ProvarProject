@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="141da40a-0572-4061-97f3-23c0d91e9642" id="4">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="1f8fdb7e-3e20-4a95-860d-9996b525cbc9" name="SetValues" testItemId="3" title="Set Values: i">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">i</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">2</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+      <parameterValueSources/>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="a2c859b6-19cf-4245-9edb-5d169345ac8e" name="If" testItemId="4" title="If: {i = j}">
+      <arguments>
+        <argument id="condition">
+          <value class="eq">
+            <lhs class="variable">
+              <path element="i"/>
+            </lhs>
+            <rhs class="variable">
+              <path element="j"/>
+            </rhs>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="then" testItemId="5">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.WaitFor" guid="c33f1799-6090-46e6-b2b2-9d38a02f95bc" name="WaitFor" testItemId="6" title="Wait For: {i = j}=&gt;{10}">
+              <arguments>
+                <argument id="condition">
+                  <value class="eq">
+                    <lhs class="variable">
+                      <path element="i"/>
+                    </lhs>
+                    <rhs class="variable">
+                      <path element="j"/>
+                    </rhs>
+                  </value>
+                </argument>
+                <argument id="testAtStart"/>
+                <argument id="maxIterations">
+                  <value class="value" valueClass="decimal">1</value>
+                </argument>
+                <argument id="sleepSecs">
+                  <value class="value" valueClass="decimal">10</value>
+                </argument>
+                <argument id="continueOnFailure">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="7"/>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.Fail" guid="895c2e8f-6afd-4172-a137-ec00909acdba" name="Fail" testItemId="8" title="Fail Test: INTNG">
+              <tags/>
+              <arguments>
+                <argument id="message">
+                  <value class="value" valueClass="string">INTNG</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="b083a405-613c-4b9d-b855-f59f52239300" name="SetValues" testItemId="9" title="Set Values: TestCaseErrorFun">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">TestCaseErrorFun</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="TestCaseErrors"/>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

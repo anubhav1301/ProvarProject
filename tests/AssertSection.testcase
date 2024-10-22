@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="04301f02-f870-479a-9004-4baec1807a10" id="12">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" guid="5d7167c6-b3c7-4389-959a-7ce2de262be7" name="AssertValues" testItemId="1" title="Assert: abcde Contains abcdef">
+      <arguments>
+        <argument id="expectedValue">
+          <value class="value" valueClass="string">abcde</value>
+        </argument>
+        <argument id="comparisonType">
+          <value class="value" valueClass="string">Contains</value>
+        </argument>
+        <argument id="actualValue">
+          <value class="value" valueClass="string">abcdef</value>
+        </argument>
+        <argument id="caseSensitive">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="numeric">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="retainDecimals">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="nullGreater">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="matchMultiLine">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+        <argument id="matchDotAll">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="failureMessage"/>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

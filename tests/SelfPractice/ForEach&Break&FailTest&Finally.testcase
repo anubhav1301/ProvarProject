@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="2ffe5d95-7e74-42ca-ab60-69c96a8158e6" id="15">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="2fb5d6b4-e5ad-406b-8acc-96f054a1f7d3" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesforceConn (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">86eb8454-8553-45e2-9d04-ff8b0e6d8460</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Fail" guid="6684b615-affb-4e8a-ab89-12be22111379" name="Fail" testItemId="10" title="Fail Test: Fail Test Intentionally">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="message">
+          <value class="value" valueClass="string">Fail Test Intentionally</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" guid="714f37af-659e-4e79-93c0-908e73a3795b" name="Split" testItemId="3" title="Split: 1,2,3,4=&gt;,=&gt;Tokens">
+      <arguments>
+        <argument id="input">
+          <value class="value" valueClass="string">1,2,3,4</value>
+        </argument>
+        <argument id="separator">
+          <value class="value" valueClass="string">,</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Tokens</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" guid="c121a86a-dc33-4e8a-96f4-76d2ee54024e" name="ForEach" testItemId="4" title="For Each: {Tokens}=&gt;Row">
+      <arguments>
+        <argument id="list">
+          <value class="variable">
+            <path element="Tokens"/>
+          </value>
+        </argument>
+        <argument id="fromItem">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="valueName">
+          <value class="value" valueClass="string">Row</value>
+        </argument>
+        <argument id="continueOnFailure">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="5">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" guid="ef869ee2-8b49-4749-bb01-db97b8394077" name="Break" testItemId="6" title="Break"/>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Finally" guid="db0a7824-688e-4122-b7de-236c4b86c31c" name="Finally" testItemId="8" title="Finally: This will execute even any previous expected exeption occur">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">This will execute even any previous expected exeption occur</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="9"/>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

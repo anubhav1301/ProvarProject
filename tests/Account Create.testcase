@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="3048b9fd-cfcc-4bce-b8ee-15cacde8c434" id="6">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="4784335b-290e-4a9c-9d9f-c8ead6f4af9c" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesforceConn (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">86eb8454-8553-45e2-9d04-ff8b0e6d8460</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="39856ee8-ea02-4d3b-b551-75413901f79e" name="SetValues" testItemId="12" title="Set Values: lastName">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">lastName</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Sumit</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="20892fc4-e787-4c6a-a2af-10ea67fdad80" name="SetValues" testItemId="5" title="Set Values: Name">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Name</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="compound">
+                  <parts>
+                    <value valueClass="string">Rohit</value>
+                    <funcCall id="UniqueId">
+                      <argument id="length">
+                        <value class="value" valueClass="decimal">2</value>
+                      </argument>
+                    </funcCall>
+                  </parts>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <caseCall guid="d96be786-19fc-4e80-a867-915700878963" testCaseId="25d2bdb3-912e-48db-be51-f8f9aae77e54" testCasePath="tests/Callable/Test Case 1.testcase" testItemId="10">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="value">
+          <value class="variable">
+            <path element="Name"/>
+          </value>
+        </argument>
+        <argument id="valuePath">
+          <value class="variable">
+            <path element="lastName"/>
+          </value>
+        </argument>
+        <argument id="LastName">
+          <value class="variable">
+            <path element="lastName"/>
+          </value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="accountId">
+          <name class="value" valueClass="string">accountId</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" guid="15ef1600-aa50-4feb-84f5-84dbe928106e" name="UiWithScreen" testItemId="13" title="On SF Account View screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Account&amp;action=View"/>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Account View screen</value>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">IfNeccessary</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="sfUiTargetObjectId">
+          <value class="variable">
+            <path element="accountId"/>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="14">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" guid="4c87d3e1-2260-4899-888e-fdc6a38ba056" name="UiAssert" testItemId="15" title="UI Assert">
+              <arguments>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="Name">
+                      <fieldLocator uri="ui:locator?name=Name&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DAccount%26field%3DName"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
+                          <value class="variable">
+                            <path element="lastName"/>
+                          </value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="locatorParams"/>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" guid="b30f438c-8ee2-4e2a-a8a7-520538fc0f55" name="ApexSoqlQuery" testItemId="17" title="SOQL Query: select Name from Account=&gt;AccountRows">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="value" valueClass="string">select Name from Account</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">AccountRows</value>
+        </argument>
+        <argument id="soqlColumnAliases">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="78c4ebab-7158-440a-a9eb-bbc14aaa249e" name="SetValues" testItemId="16" title="Set Values: CaseCountFun">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">CaseCountFun</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="Count">
+                  <argument id="value">
+                    <value class="variable">
+                      <path element="AccountRows"/>
+                    </value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="a711a963-0597-4493-834d-e2ab7d596779" name="SetValues" testItemId="18" title="Set Values: IsSortedFun">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">IsSortedFun</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="funcCall" id="IsSorted">
+                  <argument id="value">
+                    <value class="variable">
+                      <path element="ListOfValues"/>
+                    </value>
+                  </argument>
+                  <argument id="sortColumns">
+                    <value class="value" valueClass="string">1 DESC</value>
+                  </argument>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

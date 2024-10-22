@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="81b1b9e0-2fe7-41bd-b874-dbae48b99742">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="f36db453-0adf-479b-b62e-3ebad697b739" name="SetValues" testItemId="1" title="Set Values: InputString">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">InputString</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">2,4,5,1,0,9</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="customapis.Print" guid="1a419740-ed1e-4761-8607-682068f41d70" name="Print" testItemId="2" title="Print_Cust_API: ⇒ Input">
+      <arguments>
+        <argument id="InputValue">
+          <value class="variable">
+            <path element="InputString"/>
+          </value>
+        </argument>
+        <argument id="OutputMessage">
+          <value class="value" valueClass="string">Input String Of Numbers</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Input</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="customapis.SortAscending" guid="85ed8ed2-4f99-4295-9b57-310c9eb118d4" name="SortAscending" testItemId="3" title="Sort Ascending_cust_API: ⇒ StringOutput">
+      <arguments>
+        <argument id="InputString">
+          <value class="variable">
+            <path element="InputString"/>
+          </value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">StringOutput</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="customapis.Print" guid="964fbcda-74c1-41ab-ae8d-2b446661b3c7" name="Print" testItemId="4" title="Print_Cust_API: ⇒ Output">
+      <arguments>
+        <argument id="InputValue">
+          <value class="variable">
+            <path element="StringOutput"/>
+          </value>
+        </argument>
+        <argument id="OutputMessage">
+          <value class="value" valueClass="string">Numbers sorted in ascending order</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Output</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

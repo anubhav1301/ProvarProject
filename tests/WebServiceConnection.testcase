@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="cf054d64-a6e9-4013-aa67-9efe5c4a0db2">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.restservice.WebConnect" guid="ff60c904-e39e-4036-8ad2-4913e38d2c2a" name="WebConnect" testItemId="1" title="Web Connect: WebServiceConnection">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">APITesting</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">2a9312ce-5b76-4db5-8648-32ca3a9b77a5</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">WebServiceConnection</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

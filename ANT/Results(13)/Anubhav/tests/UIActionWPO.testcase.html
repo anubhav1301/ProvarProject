@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> UIActionWPO.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:46 (00:00.000)</span></div>Start of Test Case UIActionWPO.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:46 (00:00.033)</span></div>Start of Test Step UI Connect: Google</div><div class='TestOutput inf'>Opening Selenium Connection.  Connection Name: Google, Base URL: http://google.com, Private Browsing Mode: false</div><div class='TestOutput inf'>Opening Chrome webdriver instance to http://google.com</div><div class='TestOutput off'>Successfully opened Chrome webdriver to http://google.com</div><div class='TestOutput inf'>Selenium Connection opened successfully.</div><div class='TestOutput inf'>UI Connect step is success</div><div class='TestOutput off'>UI Connect step is success</div><div class='TestItemOutcome Successful'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:48 (00:02.928)</span></div>Test Step successful.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:48 (00:02.938)</span></div>Start of Test Step On MyPageObject page</div><div style='float: right;' ><a target='_blank' href='../../Artifacts/ScreenShot1'><img style='width: 150px; border: solid 2px grey;' src='../../Artifacts/ScreenShot1'></img></a></div><div class='TestOutput inf'>Start of With Screen.  Connection Name: Google, target: ui:pageobject:target?pageId=pageobjects.MyPageObject</div><div class='TestOutput sev'>Failed to locate the Page Object's implementing class.  Page Object Id: pageobjects.MyPageObject, class name: pageobjects.MyPageObject</div><div class='TestOutput sev'>Error opening Selenium Connection.  Connection Name: Google, cause: [NullPointerException&lt;br/&gt;Stack Trace:&lt;br/&gt;java.lang.NullPointerException&lt;br/&gt;	at com.provar.plugins.forcedotcom.core.ui.SeleniumUiHandler.performScreenOpenPageObject(SeleniumUiHandler.java:866)&lt;br/&gt;	at com.provar.plugins.forcedotcom.core.ui.SeleniumUiHandler.performScreenOpen(SeleniumUiHandler.java:736)&lt;br/&gt;	at com.provar.plugins.forcedotcom.core.ui.SeleniumUiHandler.perform(SeleniumUiHandler.java:399)&lt;br/&gt;	at com.provar.core.testexecution.common.java.TestExecutionContextImpl.doConnectionOperation(TestExecutionContextImpl.java:866)&lt;br/&gt;	at com.provar.plugins.forcedotcom.core.ui.UiWithScreen.execute(UiWithScreen.java:203)&lt;br/&gt;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&lt;br/&gt;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&lt;br/&gt;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&lt;br/&gt;	at java.base/java.lang.reflect.Method.invoke(Method.java:566)&lt;br/&gt;	at com.provar.core.testexecution.container.java.TestExecutionContainerImpl.invokeTestApi(TestExecutionContainerImpl.java:798)&lt;br/&gt;	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner.doInvokeTestApi(LocalTestExecutionContainerRunner.java:772)&lt;br/&gt;	at com.provar.core.testexecution.container.java.LocalTestExecutionContainerRunner$MessageProcessor.run(LocalTestExecutionContainerRunner.java:1446)&lt;br/&gt;]</div><div class='TestOutput inf'>Sending screenshot.  Data length: 30236</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:49 (00:03.698)</span></div>Start of Test Step Set the Search Box to Netflix</div><div style='float: right;' ><a target='_blank' href='../../Artifacts/ScreenShot2'><img style='width: 150px; border: solid 2px grey;' src='../../Artifacts/ScreenShot2'></img></a></div><div class='TestOutput inf'>Start of Interact.  Connection: Google, Locator: ui:pageobject:field?field=SearchBox&pageId=pageobjects.MyPageObject, before wait: default, after wait: default, auto retry: ui:wait:autoRetry:timeout=10</div><div class='TestOutput inf'>Locator: ui:pageobject:field?field=SearchBox&pageId=pageobjects.MyPageObject</div><div class='TestOutput inf'>Interaction: ui:interaction?name=set</div><div class='TestOutput inf'>Switched focus to main window.  URL: chrome://new-tab-page/</div><div class='TestOutput sev'>The containing Screen or Row was not found.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:51 (00:05.078)</span></div>Test Step failed.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Click the Netflix Watch TV Shows Online Watch Movies Online Netflixhttps Www Netflix Com SKIPPED</div></div><div class='TestOutput sev'>One or more Sub-Test Steps failed.</div><div class='TestOutput inf'>Main window reselected.  Window: main</div><div class='TestOutput inf'>Going to update browser window handles.</div><div class='TestOutput off'>Successfully updated browser window handles.</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:51 (00:05.167)</span></div>Test Step failed.</div></div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>14:03:51 (00:05.171)</span></div>Test Case failed.</div></div><div class='TestOutput inf'>Handling managed resource.  Name: Google</div><div class='TestOutput off'>Selenium Connection handled successfully.  Name: Google</div>
+	</div></body>
+</html>

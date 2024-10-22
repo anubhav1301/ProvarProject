@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="9f202c6d-f3fa-440e-8a76-17dd8854919d">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="3fda6932-3104-4eef-be88-525a456665be" name="SetValues" testItemId="1" title="Set Values: Email_Subject">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Email_Subject</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Testing</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="cb73c650-c003-408f-9464-db50c59e023a" name="SetValues" testItemId="2" title="Set Values: Email_Body">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Email_Body</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Hii</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="b8b0565f-4c6e-405f-a31a-1507909736d2" name="SetValues" testItemId="3" title="Set Values: Signature">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Signature</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">AnubhavSharma</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.messaging.SendMessage" guid="5e0f4236-cbd4-4758-9c84-00e90ae7fd90" name="SendMessage" testItemId="4" title="Send Message: GmailConnection">
+      <arguments>
+        <argument id="destinationConnectionName">
+          <value class="value" valueClass="string">GmailConnection</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">a4df75c2-6555-4bdc-8faa-bfeab00f11d1</value>
+        </argument>
+        <argument id="body">
+          <value class="variable">
+            <path element="Email_Body"/>
+          </value>
+        </argument>
+        <argument id="payloadFormat">
+          <value class="value" valueClass="string">Auto</value>
+        </argument>
+        <argument id="attachments">
+          <value class="valueList" mutable="Mutable"/>
+        </argument>
+        <argument id="to">
+          <value class="value" valueClass="string">anubhav.sharma@provartesting.com</value>
+        </argument>
+        <argument id="cc"/>
+        <argument id="bcc"/>
+        <argument id="subject">
+          <value class="variable">
+            <path element="Email_Subject"/>
+          </value>
+        </argument>
+        <argument id="signature">
+          <value class="variable">
+            <path element="Signature"/>
+          </value>
+        </argument>
+      </arguments>
+      <generatedParameters>
+        <param group="destination" linkedToUrl="connectionParam:destinationConnectionName" mandatory="true" name="to" title="To">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="destination" linkedToUrl="connectionParam:destinationConnectionName" name="cc" title="CC">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="destination" linkedToUrl="connectionParam:destinationConnectionName" name="bcc" title="BCC">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="payload" linkedToUrl="connectionParam:destinationConnectionName" name="subject" title="Subject">
+          <type>
+            <textType/>
+          </type>
+        </param>
+        <param group="payload" linkedToUrl="connectionParam:destinationConnectionName" name="signature" title="Signature">
+          <type>
+            <textType/>
+          </type>
+        </param>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

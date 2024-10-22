@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="4307b9c8-b872-4a06-9743-8eac083f4442" id="19">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="38fc49dc-db0b-4e6a-906f-2e6d74cadba0" name="SetValues" testItemId="1" title="Set Values: ab">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">ab</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">5</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.DoWhile" guid="bbac682f-1640-4b55-85d9-015710ca6384" name="DoWhile" testItemId="2" title="While: {ab = 5}">
+      <arguments>
+        <argument id="condition">
+          <value class="eq">
+            <lhs class="variable">
+              <path element="ab"/>
+            </lhs>
+            <rhs class="value" valueClass="decimal">5</rhs>
+          </value>
+        </argument>
+        <argument id="counterName">
+          <value class="value" valueClass="string">LoopCounter</value>
+        </argument>
+        <argument id="counterStart">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="counterEnd">
+          <value class="value" valueClass="decimal">4</value>
+        </argument>
+        <argument id="continueOnFailure">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="6b645fa3-d85e-4438-9909-891d685eb6b3" name="SetValues" testItemId="4" title="Set Values: BD">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">BD</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">Anubhav</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.Finally" guid="586d1981-72b2-4c19-9c16-0df87dc627c2" name="Finally" testItemId="6" title="Finally: If while will not execute">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">If while will not execute</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="7">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="9a5e584c-f293-4fb0-b6ca-2d798792cd7e" name="SetValues" testItemId="8" title="Set Values: DC">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">DC</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">Avengers</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

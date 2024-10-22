@@ -1,0 +1,102 @@
+<html>
+	<head>
+		<style>
+
+			body {
+				font-family: sans-serif;
+			}
+
+			.TestCaseImplTitle {
+				color: blue;
+				font: 0.85em arial;
+				font-weight: bold;
+			}
+
+			.TestCaseImpl .TestItemTitle {
+				color: blue;
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+				margin-bottom: 0.5em;
+			}
+
+			.TestCaseImpl .TestItemOutcome {
+				border-top: 2px solid blue;
+				border-bottom: 2px solid blue;
+			}
+
+			.ApiCallImpl .TestItemTitle{
+				color: blue;
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+				margin-bottom: 0.25em;
+			}
+
+			.ApiCallImpl .TestItemOutcome {
+				border-top: 1px solid blue;
+				border-bottom: 1px solid blue;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				margin-top: 0.25em;
+			}
+
+			.TestItemOutcome {
+				padding-left: 20px;
+				padding-top: 0.1em;
+				padding-bottom: 0.1em;
+				clear: both;
+			}
+			
+			.TestItemOutcome.Successful {
+				color: green;
+				background: url('../../successful_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestItemOutcome.Failed {
+				color: red;
+				background: url('../../failed_16x16.gif') no-repeat 0 0.15em;
+				font-weight: bold;
+			}
+
+			.TestItemOutcome.Skipped {
+				color: orange;
+				background: url('../../skipped_16x16.gif') no-repeat 0 0.15em;
+			}
+
+			.TestOutput {
+				font: 0.9em arial;
+				color: black;
+				margin-top: 0.15em;
+				margin-bottom: 0.15em;
+			}
+
+			.TestOutput.err {
+				font-weight: bold;
+				color: red;
+			}
+
+			.TestOutput.war {
+				font-weight: bold;
+				color: orange;
+			}
+
+			.ApiCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+
+			.TestCaseCallImpl{
+				margin-left: 1em;
+				margin-bottom: 0.4em;
+			}
+			
+		</style>
+	</head>
+	<body><div id='detail-body'>
+	<div class='TestOutput inf'>Loading test case.  File: C:\Users\anubhav.sharma\Provar\PersonalProject\Anubhav\tests\Callable\Test Case 1.testcase</div><div style='float: right;'><img src='../..//provar_logo_400x100.png' height='50'/></div>
+<h2><img src='../..//testcase_16x16.png' style='height: 24; padding-top: 4px;'/> Account Create.testcase</h2>
+<div class='TestCaseImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>13:47:24 (00:00.000)</span></div>Start of Test Case Account Create.testcase</div><div class='ApiCallImpl'><div class='TestItemTitle'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>13:47:24 (00:00.015)</span></div>Start of Test Step Salesforce Connect: SalesforceConn (Test)</div><div class='TestOutput inf'>Connecting to Salesforce as SalesforceConn</div><div class='TestOutput sev'>Connection exception while opening Partner connection. Connection name: SalesforceConn, environment: &lt;default&gt;, authEndpoint: https://login.salesforce.com/services/Soap/u/61.0, userName: anubhav7522@gmail.com, password: [supplied], securityToken: [empty]</div><div class='TestOutput sev'>[LoginFault]</div><div class='TestOutput sev'>Error when attempting to connect to Salesforce as SalesforceConn</div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>13:47:25 (00:01.137)</span></div>Test Step failed.</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Set Values: lastName SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Set Values: Name SKIPPED</div></div><div class='TestCaseCallImpl'><div class='TestItemTitle'>Test Case Call Call Test Case 1 SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step On SF Account View screen SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step SOQL Query: select Name from Account=&gt;AccountRows SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Set Values: CaseCountFun SKIPPED</div></div><div class='ApiCallImpl'><div class='TestItemTitle'>Test Step Set Values: IsSortedFun SKIPPED</div></div><div class='TestItemOutcome Failed'><div style='float: right; font-size: 0.8em;'><img src='../..//timer_16x16.gif' style='height: 16; padding-top: 2px;'/><span style='padding-bottom: 2px;'>13:47:25 (00:01.141)</span></div>Test Case failed.</div></div>
+	</div></body>
+</html>

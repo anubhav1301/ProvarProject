@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="1" hostname="ibm-anubhavsharma" id="0" name="Anubhav/tests" package="" skipped="0" tests="1" time="1.127" timestamp="Wed Sep 18 13:44:13 IST 2024">
+	    <properties>
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="testEnvironment" value="" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+		      <property name="projectPath" value=".." />
+
+		      <property name="salesforceMetadataCache" value="Reuse" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="testOutputLevel" value="INFO" />
+
+		      <property name="webBrowserType" value="Chrome" />
+
+		      <property name="resultsPath" value="../ANT/Results" />
+
+		      <property name="webBrowserConfiguration" value="Full Screen" />
+
+		      <property name="projectCachePath" value="C:\Users\anubhav.sharma\Provar\PersonalProject\Anubhav\ANT\..\..\.provarCaches" />
+
+	    </properties>
+
+	    <testcase classname="tests/Account Create.testcase" name="Account Create.testcase" time="1.07">
+		      <failure message="Execution failed"><![CDATA[Connection exception while opening Partner connection. Connection name: SalesforceConn, environment: <default>, authEndpoint: https://login.salesforce.com/services/Soap/u/61.0, userName: anubhav7522@gmail.com, password: [supplied], securityToken: [empty]]]></failure>
+
+	    </testcase>
+
+  </testsuite>
+</testsuites>

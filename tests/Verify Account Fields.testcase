@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="dfb07f0a-5d31-420b-a6f7-58144d532398" id="9">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="7b4aec9b-5e97-4ff7-a8c9-3adcc8017567" name="SetValues" testItemId="9" title="Set Values: name">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">name</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="compound">
+                  <parts>
+                    <value valueClass="string">Rohit</value>
+                    <funcCall id="UniqueId">
+                      <argument id="length">
+                        <value class="value" valueClass="decimal">2</value>
+                      </argument>
+                    </funcCall>
+                  </parts>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <caseCall guid="4418c0ce-7bdc-4e07-8a5b-df759bd1708a" testCaseId="23b29c69-0c7e-4e21-a283-b2b08bf8bd04" testCasePath="tests/Callable/TESTCase2.testcase" testItemId="5">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="Value">
+          <value class="value" valueClass="string">AccountName</value>
+        </argument>
+        <argument id="Phone">
+          <value class="value" valueClass="string">Phone</value>
+        </argument>
+        <argument id="value">
+          <value class="variable">
+            <path element="name"/>
+          </value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="AccountId">
+          <name class="value" valueClass="string">AccountId</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+  </steps>
+</testCase>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="df94638b-dcb5-4c48-986e-7eac0e55ae08" id="17">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="75b181e2-6b5e-4e2f-a552-99b9397ddbb3" name="StepGroup" testItemId="4" title="ComapringTwoDifferentLists">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">ComapringTwoDifferentLists</value>
+        </argument>
+      </arguments>
+      <parameterValueSources>
+        <parameterValueSource variableName="SourceData1" variableScope="Test">
+          <cacheToken>C:/Users/anubhav.sharma/Provar/PersonalProject/Anubhav/templates/List(1).xlsx;1719299049527</cacheToken>
+          <cachedParameters>
+            <apiParam name="Name"/>
+            <apiParam name="Course"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/List(1).xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+            <valuesRange class="value" valueClass="string"/>
+          </sourceValue>
+        </parameterValueSource>
+        <parameterValueSource variableName="SourceData2" variableScope="Test">
+          <cacheToken>C:/Users/anubhav.sharma/Provar/PersonalProject/Anubhav/templates/List(2).xlsx;1719299075649</cacheToken>
+          <cachedParameters>
+            <apiParam name="Name"/>
+            <apiParam name="Course"/>
+          </cachedParameters>
+          <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+            <workbookPath class="value" valueClass="string">templates/List(2).xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+            <valuesRange class="value" valueClass="string"/>
+          </sourceValue>
+        </parameterValueSource>
+      </parameterValueSources>
+      <clauses>
+        <clause name="hidden" testItemId="5"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.list.ListCompare" guid="c08fa954-5c14-4b2f-af14-64d01d53f370" name="ListCompare" testItemId="3" title="Compare: {SourceData1}=&gt;{SourceData2}">
+      <arguments>
+        <argument id="list1">
+          <value class="variable">
+            <path element="SourceData1"/>
+          </value>
+        </argument>
+        <argument id="list2">
+          <value class="variable">
+            <path element="SourceData2"/>
+          </value>
+        </argument>
+        <argument id="matchColumns"/>
+        <argument id="compareColumns"/>
+        <argument id="ignoreColumns">
+          <value class="value" valueClass="string">Name</value>
+        </argument>
+        <argument id="differenceHandling">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="unmatched1Handling">
+          <value class="value" valueClass="string">Warn</value>
+        </argument>
+        <argument id="unmatched2Handling">
+          <value class="value" valueClass="string">Warn</value>
+        </argument>
+        <argument id="caseInsensitive">
+          <value class="value" valueClass="boolean">false</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+  <parameterValueSources/>
+</testCase>

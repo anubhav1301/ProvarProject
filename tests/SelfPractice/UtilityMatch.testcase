@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="fb15d111-ab20-4a80-8750-7b5722f5dc32" id="13">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Match" guid="646d4e46-31c1-46c0-9e7b-678bd6d560cc" name="Match" testItemId="6" title="Match: This is anubhav sharma and I live in greater noida . During my academics I have done so many projects including the projects of web development as well as testing.=&gt;many (.*) including=&gt;result">
+      <arguments>
+        <argument id="input">
+          <value class="value" valueClass="string">This is anubhav sharma and I live in greater noida . During my academics I have done so many projects including the projects of web development as well as testing.</value>
+        </argument>
+        <argument id="regex">
+          <value class="value" valueClass="string">many (.*) including</value>
+        </argument>
+        <argument id="caseInsensitive"/>
+        <argument id="resultName">
+          <value class="value" valueClass="string">result</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

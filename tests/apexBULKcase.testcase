@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="1719701a-afb2-4ba9-9ba4-d2338145bfe4" id="7" registryId="1719701a-afb2-4ba9-9ba4-d2338145bfe4">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="a6cb9c8e-a049-406b-b809-8d17a2827d72" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesforceConn (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">86eb8454-8553-45e2-9d04-ff8b0e6d8460</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexBulk" guid="3e9da149-6c6d-4d21-a98b-ecdfe882e987" name="ApexBulk" testItemId="2" title="Apex Bulk: insert=&gt;acc">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="operation">
+          <value class="value" valueClass="string">insert</value>
+        </argument>
+        <argument id="externalIdFieldName"/>
+        <argument id="assignmentRuleId"/>
+        <argument id="data">
+          <value class="url">templates/ApexBulk - ApexBulk.csv.csv</value>
+        </argument>
+        <argument id="contentType">
+          <value class="value" valueClass="string">CSV</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">acc</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexExecute" guid="1e663250-e7b2-446a-8874-edeaeda84a5f" name="ApexExecute" testItemId="3" title="Apex Execute">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="apexBlock">
+          <value class="value" valueClass="string">UserInfo.getUserEmail();</value>
+        </argument>
+        <argument id="results">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="resultName">
+                <value class="value" valueClass="string">ExecuteResult</value>
+              </namedValue>
+              <namedValue name="resultScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+              <namedValue name="regularExpression">
+                <value class="value" valueClass="string">0055j00000CCod\\|(.*)\\|\\(GMT\\+05:30\\)</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexExtractLayout" guid="014c8468-090b-40ee-8144-cacfb39acf08" name="ApexExtractLayout" testItemId="4" title="Extract Salesforce Layout=&gt;Account">
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="objectName">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="extractRecordPageLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="extractDynamicFormLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="includeFieldPermissions"/>
+        <argument id="dataUrl">
+          <value class="excelTarget">
+            <workbookPath class="value" valueClass="string">templates/ApexExecute2.xlsx</workbookPath>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexAssertLayout" guid="20c35bcb-7778-490e-900a-ce8792376271" name="ApexAssertLayout" testItemId="5" title="Assert Salesforce Layout=&gt;Account">
+      <tags/>
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="objectName">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="extractRecordPageLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="extractDynamicFormLayout">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget">
+            <workbookPath class="value" valueClass="string">templates/ApexExecute2.xlsx</workbookPath>
+          </value>
+        </argument>
+        <argument id="includeFieldPermissions"/>
+        <argument id="reportUnmatchedExpectedRecordTypes">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reportUnmatchedActualRecordTypes">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reportUnmatchedExpectedFields">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reportUnmatchedActualFields">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

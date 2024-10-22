@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="279d37ad-2412-49ef-a47d-bcbc362fa0aa" id="16" registryId="279d37ad-2412-49ef-a47d-bcbc362fa0aa">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="25cb1dd2-61be-4629-b3e4-fb111b1cacce" name="SetValues" testItemId="2" title="Set Values: flag">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">flag</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">1</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="3ae4465b-89a7-4512-abcd-9da2bf96ee5c" name="If" testItemId="3" title="If: {flag = &quot;2&quot;}">
+      <arguments>
+        <argument id="condition">
+          <value class="eq">
+            <lhs class="variable">
+              <path element="flag"/>
+            </lhs>
+            <rhs class="value" valueClass="string">2</rhs>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="then" testItemId="4">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" guid="465c0133-098f-4e12-98f0-9d25ec481dbd" name="AssertValues" testItemId="9" title="Assert: {flag} EqualTo 1">
+              <tags/>
+              <arguments>
+                <argument id="expectedValue">
+                  <value class="variable">
+                    <path element="flag"/>
+                  </value>
+                </argument>
+                <argument id="comparisonType">
+                  <value class="value" valueClass="string">EqualTo</value>
+                </argument>
+                <argument id="actualValue">
+                  <value class="value" valueClass="string">1</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="numeric">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="retainDecimals">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="nullGreater">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="matchMultiLine">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="matchDotAll">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="failureMessage"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="d411a564-ace4-42b8-a826-1b1f02c79354" name="SetValues" testItemId="14" title="Set Values: a">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">a</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">true</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+        <clause name="else" testItemId="13">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="f41ef5af-261e-4da1-bc37-1dde38390ff7" name="SetValues" testItemId="15" title="Set Values: a">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">a</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">false</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

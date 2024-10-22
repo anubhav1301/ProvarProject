@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="a34e5a24-0df3-457f-9c99-91f0e82523c1" id="2">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" guid="d26e5b2c-4ef2-491d-9250-c1b976281c73" name="ApexConnect" testItemId="1" title="Salesforce Connect: SalesforceConn (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="connectionId">
+          <value class="value" valueClass="id">86eb8454-8553-45e2-9d04-ff8b0e6d8460</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">SalesforceConn</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">LightningSales</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="4b78e75e-0972-45e1-8a01-561a4912b0dc" name="StepGroup" testItemId="11" title="SetUp Data">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">SetUp Data</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="12">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="af54a06d-7e7f-4c99-b17e-41bb287169cd" name="SetValues" testItemId="13" title="Set Values: CloseDate">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">OppName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="compound">
+                          <parts>
+                            <value valueClass="string">Demo</value>
+                            <funcCall id="UniqueId">
+                              <argument id="length">
+                                <value class="value" valueClass="decimal">5</value>
+                              </argument>
+                            </funcCall>
+                          </parts>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Stage</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">Prospecting</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">LeadSource</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">Web</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Type</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">Existing Customer - Upgrade</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">CloseDate</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="DateAdd">
+                          <argument id="date">
+                            <value class="variable">
+                              <path element="TODAY"/>
+                            </value>
+                          </argument>
+                          <argument id="amount">
+                            <value class="value" valueClass="decimal">1</value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+              <expectedExceptions/>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="3bd03c11-b7dc-402d-a239-a666bb9b5cd7" name="StepGroup" testItemId="15" title="Retrieve Account ">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Retrieve Account </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="16">
+          <steps>
+            <caseCall guid="885e10d8-d632-4d74-8605-33ce55ec361b" testCaseId="46d93664-42f1-4723-9970-51115d00aeb3" testCasePath="tests/SelfPractice/Find Valid Account.testcase" testItemId="17">
+              <arguments>
+                <argument id="soqlQuery">
+                  <value class="value" valueClass="string">select Id from Account where Name like 'DevOps%'</value>
+                </argument>
+                <argument id="AccountName">
+                  <value class="value" valueClass="string">DevOps</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="AccountRows">
+                  <name class="value" valueClass="string">AccountRows</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="dd9a6e8c-bb80-491a-9198-d0bbd026fa3b" name="StepGroup" testItemId="2" title="Create Account">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Create Account</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="3"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="9464b7bf-d60c-4f15-b611-c74934ee7ecf" name="StepGroup" testItemId="4" title="Create Opp For Account">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Create Opp For Account</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="5">
+          <steps>
+            <caseCall guid="07bd3e83-a551-4a34-96e3-24fd1146f62d" testCaseId="ac9e6243-848a-4ca2-8914-ad5628f79a4b" testCasePath="tests/Callable/Create Opp.testcase" testItemId="6">
+              <arguments>
+                <argument id="OppName">
+                  <value class="variable">
+                    <path element="OppName"/>
+                  </value>
+                </argument>
+                <argument id="StageName">
+                  <value class="variable">
+                    <path element="Stage"/>
+                  </value>
+                </argument>
+                <argument id="LeadSource">
+                  <value class="variable">
+                    <path element="LeadSource"/>
+                  </value>
+                </argument>
+                <argument id="Type">
+                  <value class="variable">
+                    <path element="Type"/>
+                  </value>
+                </argument>
+                <argument id="CloseDate">
+                  <value class="variable">
+                    <path element="CloseDate"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="a481a12d-cddb-478e-97a4-d7fb27be937e" name="StepGroup" testItemId="7" title="Create Contact for Account">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Create Contact for Account</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="8"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="46f17631-2ebc-42d3-94ad-b7cd5443a5d5" name="StepGroup" testItemId="9" title="Create Case For Account">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Create Case For Account</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="10"/>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

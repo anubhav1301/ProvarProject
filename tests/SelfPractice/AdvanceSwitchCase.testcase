@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="17aee00f-0741-4461-9d6b-3387cf3f3333">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.Switch" guid="cd172200-9c8b-41cc-9156-fcb79cc1390b" name="Switch" testItemId="1" title="Switch: Cricket">
+      <arguments>
+        <argument id="value">
+          <value class="value" valueClass="string">Cricket</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="case" testItemId="2">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" guid="e35209ff-2ad8-4692-94a8-6f38212f6f57" name="SwitchCase" testItemId="3" title="Case: Football">
+              <arguments>
+                <argument id="value">
+                  <value class="value" valueClass="string">Football</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="string">No</value>
+                </argument>
+                <argument id="alreadyMatched"/>
+                <argument id="switchValue"/>
+              </arguments>
+              <clauses>
+                <clause name="steps" testItemId="4">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="cc86c178-59be-4470-ade3-3912396fce75" name="SetValues" testItemId="9" title="Set Values: SelectedSport1">
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">SelectedSport1</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">Football</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" guid="b011394e-c97a-447e-a747-45d253effbb7" name="Break" testItemId="11" title="Break"/>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+        <clause name="case" testItemId="5">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.SwitchCase" guid="2346600c-2dc3-4ba7-b355-83aceae4cf01" name="SwitchCase" testItemId="6" title="Case: Cricket">
+              <arguments>
+                <argument id="value">
+                  <value class="value" valueClass="string">Cricket</value>
+                </argument>
+                <argument id="caseSensitive">
+                  <value class="value" valueClass="string">No</value>
+                </argument>
+                <argument id="alreadyMatched"/>
+                <argument id="switchValue"/>
+              </arguments>
+              <clauses>
+                <clause name="steps" testItemId="7">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="821dcd96-f84e-46a8-8eab-8a8342711678" name="SetValues" testItemId="12" title="Set Values: SelectedSport2">
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">SelectedSport2</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">Cricket</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" guid="ef60226c-e718-4853-8f77-4815f654b97a" name="Break" testItemId="10" title="Break"/>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+        <clause name="default" testItemId="14">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.SwitchDefault" guid="366b78cc-1148-46a2-90df-8929a465e112" name="SwitchDefault" testItemId="15" title="Default">
+              <clauses>
+                <clause name="steps" testItemId="16">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="152224cc-7fe8-4666-89d8-12f41126da69" name="SetValues" testItemId="17" title="Set Values: SelectedSport3">
+                      <arguments>
+                        <argument id="values">
+                          <value class="valueList" mutable="Mutable">
+                            <namedValues mutable="Mutable">
+                              <namedValue name="valuePath">
+                                <value class="value" valueClass="string">SelectedSport3</value>
+                              </namedValue>
+                              <namedValue name="value">
+                                <value class="value" valueClass="string">Kabbadi</value>
+                              </namedValue>
+                              <namedValue name="valueScope">
+                                <value class="value" valueClass="string">Test</value>
+                              </namedValue>
+                            </namedValues>
+                          </value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

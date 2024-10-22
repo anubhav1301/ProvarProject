@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Anubhav/tests" tests="1" failures="1" skipped="0" hostname="ibm-anubhavsharma" time="46.838" timestamp="Wed Sep 25 13:09:17 IST 2024">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="INFO"/>
+		<property name="webBrowserType" value="Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\anubhav.sharma\Provar\PersonalProject\Anubhav\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/Account Create.testcase" name="Account Create.testcase" time="46.711">
+		<failure message="Execution failed"><![CDATA[Error opening Salesforce UI Connection.  Connection Name: SalesforceConn, cause: [NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=129.0.6668.59)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver$$EnhancerByCGLIB$$dace278c
+Command: [6fcdc44e339e9987555fc7b7333f89b2, getCurrentUrl {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.59, chrome: {chromedriverVersion: 128.0.6613.85 (5b672c5c0433..., userDataDir: C:\Users\anubhav.sharma\Pro...}, fedcm:accounts: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(direct), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6fcdc44e339e9987555fc7b7333f89b2]]]></failure>
+	</testcase>
+</testsuite>

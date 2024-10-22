@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="45313d2a-00ab-461f-8daf-7e5775ab7d3b" id="10">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="6ca7e363-2acb-494e-b4d1-a23968afdfc8" name="SetValues" testItemId="1" title="Set Values: Value">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Value</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">This is my first test case</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.If" guid="031c14b2-74ad-43d6-9e3d-1372fd9ff0fb" name="If" testItemId="2" title="If: {Value ~ &quot;.*test.*&quot;}">
+      <arguments>
+        <argument id="condition">
+          <value class="match">
+            <lhs class="variable">
+              <path element="Value"/>
+            </lhs>
+            <rhs class="value" valueClass="string">.*test.*</rhs>
+          </value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="then" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" guid="34d1941d-3967-49f3-bfa8-2c356cdb890e" name="SetValues" testItemId="4" title="Set Values: Test">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">Hi ,This is Anubhav</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

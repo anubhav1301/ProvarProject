@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase guid="8479c653-7972-4ea5-a54c-40dae9087e4a">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" guid="b876b1ab-271a-4f05-a28b-75f9c3acde0f" name="StepGroup" testItemId="2" title="Read Excel">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">Read Excel</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="3">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" guid="422522b2-725b-4786-9dcd-a66c2c01088e" name="Split" testItemId="4" title="Split: I'm the new joinee at Provar'=&gt;,=&gt;Tokens">
+              <arguments>
+                <argument id="input">
+                  <value class="value" valueClass="string">I'm the new joinee at Provar'</value>
+                </argument>
+                <argument id="separator">
+                  <value class="value" valueClass="string">,</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Tokens</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" guid="3c607ea0-de8b-4ab1-82c3-61da0ef77acf" name="Write" testItemId="5" title="Write: {Tokens}=&gt;templates/WriteWorkBook.xlsx">
+              <arguments>
+                <argument id="data">
+                  <value class="variable">
+                    <path element="Tokens"/>
+                  </value>
+                </argument>
+                <argument id="dataUrl">
+                  <value class="excelTarget" sheetWriteMode="Append">
+                    <workbookPath class="value" valueClass="string">templates/WriteWorkBook.xlsx</workbookPath>
+                    <worksheetName class="value" valueClass="string">Sheet1</worksheetName>
+                  </value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">templates/WriteWorkBook.xlsx</value>
+                </argument>
+              </arguments>
+              <generatedParameters/>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

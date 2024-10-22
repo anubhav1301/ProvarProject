@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testProject guid="a89da949-67ba-41d5-afa2-754ae60b69ce" selectedBrowserProviderDeviceName="Full Screen" selectedBrowserProviderName="Desktop">
+  <title>/Anubhav/.testproject</title>
+  <configPath>config</configPath>
+  <testsPath>tests</testsPath>
+  <testPlansPath>plans</testPlansPath>
+  <templatesPath>templates</templatesPath>
+  <sourcePath>src</sourcePath>
+  <secureStoragePath>.secrets</secureStoragePath>
+  <browserDebugPort>0</browserDebugPort>
+  <environments>
+    <environment guid="35e0bc21-5d6b-43ed-a1e4-330a8663bd2c" name="QA">
+      <summary/>
+    </environment>
+  </environments>
+  <variables/>
+  <connectionClasses>
+    <connectionClass name="sf">
+      <connections>
+        <connection id="86eb8454-8553-45e2-9d04-ff8b0e6d8460" name="SalesforceConn">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="8b92cbf6-531b-4233-b123-9de5a252630b" url="sf:user=anubhav7522@gmail.com;password={password};environment=PROD_DEV;lightningMode=true"/>
+            <connectionUrl envId="35e0bc21-5d6b-43ed-a1e4-330a8663bd2c" envName="QA" secureStorageNodeId="02283a94-0531-4d35-872e-20ef112d633b" url="sf:user=ashishkushwaha9288@gmail.com;password={password};environment=PROD_DEV;lightningMode=true"/>
+          </connectionUrls>
+        </connection>
+        <connection id="775f1cc8-ca12-4fab-b6d0-96dc6929f298" name="SalesforceOAuth">
+          <summary>SalesforceOAuth Connection</summary>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="8c1a3ee2-b338-487b-b9ad-3cc692e0b71f" url="sf:environment=PROD_DEV;apiLoginUrl=https://testing250-dev-ed.develop.my.salesforce.com;identityServiceUrl=https://login.salesforce.com/id/00D5h000009Q6XQEA0/0055h00000AfVLQAA3;clientId={clientId};clientSecret={clientSecret};lightningMode=true;authenticationType=OAUTH;callbackUrl={callbackUrl};accessToken={accessToken};refreshToken={refreshToken}"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="ui">
+      <connections>
+        <connection id="f0ac0897-3c55-4f79-9176-164e9d883e5a" name="Google">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="se:baseUrl=http://google.com"/>
+          </connectionUrls>
+        </connection>
+        <connection id="a89da280-c521-446f-8411-b9dd12db03dc" name="UIConnTest">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="2f283201-5c5f-472a-8c2f-d7ae6fc90ef3" url="se:baseUrl=https://the-internet.herokuapp.com/"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="webservice">
+      <connections>
+        <connection id="2a9312ce-5b76-4db5-8648-32ca3a9b77a5" name="APITesting">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="restservice:url=https://SampleAPI.com;authenticationType=NO_AUTHENTICATION">
+              <customHeaders/>
+            </connectionUrl>
+          </connectionUrls>
+        </connection>
+        <connection id="05b62687-0674-4708-8d34-8ca5ec470a9a" name="Slack">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl url="restservice:url=https://hooks.slack.com/services;authenticationType=NO_AUTHENTICATION">
+              <customHeaders/>
+            </connectionUrl>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection id="a4df75c2-6555-4bdc-8faa-bfeab00f11d1" name="GmailConnection">
+          <summary>Connection for verifying email</summary>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="8d2c9166-727d-417b-a720-4635567fa439" url="google:user=anubhavsharma7522@gmail.com;password={password};authenticationType=PASSWORD"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
+  </connectionClasses>
+  <browserConfigurations>
+    <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">
+      <summary>Full screen with Test Builder adjustment</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1024" browserWidthType="Pixels" name="1024x768">
+      <summary>Fixed 1024x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="800" browserHeightType="Pixels" browserWidth="1280" browserWidthType="Pixels" name="1280x800">
+      <summary>Fixed 1280x800</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="768" browserHeightType="Pixels" browserWidth="1366" browserWidthType="Pixels" name="1366x768">
+      <summary>Fixed 1366x768</summary>
+    </browserConfiguration>
+    <browserConfiguration browserHeight="1080" browserHeightType="Pixels" browserWidth="1920" browserWidthType="Pixels" name="1920x1080">
+      <summary>Fixed 1920x1080</summary>
+    </browserConfiguration>
+  </browserConfigurations>
+  <browserApplications>
+    <browserApplication connectionTypes="sf" name="Salesforce1">
+      <properties>
+        <browserPlatformProperty name="browserName" platform="IOS" type="DesiredCapability" value="Safari"/>
+        <browserPlatformProperty name="browserName" platform="ANDROID" type="DesiredCapability" value="Chrome"/>
+      </properties>
+    </browserApplication>
+    <browserApplication connectionTypes="sf" name="ServiceMax FSA">
+      <properties>
+        <browserPlatformProperty name="bundleId" platform="IOS" type="DesiredCapability" value="com.servicemaxinc.svmxfieldserviceapp"/>
+        <browserPlatformProperty name="app" platform="DESKTOP" type="DesiredCapability" value="C:\\Program Files\\ServiceMax\\ServiceMax Field Service\\Laptop Mobile.exe"/>
+      </properties>
+    </browserApplication>
+  </browserApplications>
+  <browserProviders>
+    <browserProvider name="Desktop" type="SeleniumLocal">
+      <devices>
+        <browserProviderDevice name="Full Screen">
+          <properties>
+            <browserPlatformProperty name="summary" value="Full screen with Test Builder adjustment"/>
+            <browserPlatformProperty name="browserHeightType" value="Full"/>
+            <browserPlatformProperty name="browserWidthType" value="Full"/>
+            <browserPlatformProperty name="adjustBrowserWidthForChromeIde" value="true"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1024x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1024x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1024"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1280x800">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1280x800"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="800"/>
+            <browserPlatformProperty name="browserWidth" value="1280"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1366x768">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1366x768"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="768"/>
+            <browserPlatformProperty name="browserWidth" value="1366"/>
+          </properties>
+        </browserProviderDevice>
+        <browserProviderDevice name="1920x1080">
+          <properties>
+            <browserPlatformProperty name="summary" value="Fixed 1920x1080"/>
+            <browserPlatformProperty name="browserHeightType" value="Pixels"/>
+            <browserPlatformProperty name="browserWidthType" value="Pixels"/>
+            <browserPlatformProperty name="browserHeight" value="1080"/>
+            <browserPlatformProperty name="browserWidth" value="1920"/>
+          </properties>
+        </browserProviderDevice>
+      </devices>
+      <properties/>
+    </browserProvider>
+  </browserProviders>
+</testProject>
