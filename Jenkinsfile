@@ -8,11 +8,11 @@ pipeline {
             }
         }
         stage('Run Provar Tests') {
-            steps {
-                // Run Provar CLI command to execute tests
-                sh 'provar-cli -p C:\Users\anubhav.sharma\Provar\PPProject\Anubhav -t C:\Users\anubhav.sharma\Provar\PPProject\Anubhav\tests -r C:\Users\anubhav.sharma\Provar\PPProject\Anubhav\ANT\Results'
-            }
-        }
+    steps {
+        // Run Provar CLI command to execute tests with corrected path
+        sh 'provar-cli -p C:/Users/anubhav.sharma/Provar/PPProject/Anubhav -t C:/Users/anubhav.sharma/Provar/PPProject/Anubhav/tests -r C:/Users/anubhav.sharma/Provar/PPProject/Anubhav/ANT/Results'
+    }
+}
     }
     post {
         always {
