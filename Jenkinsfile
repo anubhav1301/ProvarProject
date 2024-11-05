@@ -4,20 +4,20 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull Provar project from your repository
-                git 'https://your-repo-url.git'
+                git 'https://github.com/anubhav1301/ProvarProject.git'
             }
         }
         stage('Run Provar Tests') {
             steps {
                 // Run Provar CLI command to execute tests
-                sh 'provar-cli -p /path/to/your/ProvarProject.provar -t TestCasesFolder -r /path/to/output/results'
+                sh 'provar-cli -p C:\Users\anubhav.sharma\Provar\PPProject\Anubhav -t C:\Users\anubhav.sharma\Provar\PPProject\Anubhav\tests -r C:\Users\anubhav.sharma\Provar\PPProject\Anubhav\ANT\Results'
             }
         }
     }
     post {
         always {
             // Archive test results for review
-            archiveArtifacts artifacts: 'path/to/output/results/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'test-results/**', allowEmptyArchive: true
         }
     }
 }
